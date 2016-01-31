@@ -16,7 +16,7 @@ day = (day < 10 ? "0" : "") + day;
 now = year + month + day;
 
 // List of volumes stored in an array of strings
-var volumes = ['vol-a346b85c'];
+var volumes = ['vol-f599450a'];
 
 // Epmty array to hod the new snapshot IDs
 var snapshots = [];
@@ -27,7 +27,7 @@ exports.createSnapshots = function(event, context) {
   for (index = 0; index < volumes.length; ++index) {
     var params = {
       VolumeId: volumes[index],
-      Description: now + " daily Snapshot for " + volumes[index],
+      Description: now + " weekly Snapshot for " + volumes[index],
       DryRun: false
     };
 
